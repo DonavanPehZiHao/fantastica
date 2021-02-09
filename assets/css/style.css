@@ -11,12 +11,24 @@
     font-size: 15px;
 }
 
-/* .log-in {
-    display:flex;
-} */
+.log-in h1 {
+    padding-top:125px;
+    text-align:center;
+}
+
+.log-in-button {
+    color:white;
+    text-decoration:none;
+}
+
+.log-in-button:active {
+    color:white;
+    background:#007bff;
+    text-decoration:none;
+}
 
 form {
     display:block;
-    width:80%;
+    padding: 55px 10% 5% 10%;
 }
   
