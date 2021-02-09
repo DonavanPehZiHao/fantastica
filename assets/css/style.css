@@ -11,4 +11,12 @@
     font-size: 15px;
 }
 
+/* .log-in {
+    display:flex;
+} */
+
+form {
+    display:block;
+    width:80%;
+}
   
