@@ -21,6 +21,11 @@
     text-decoration:none;
 }
 
+.log-in-button:hover {
+    color:white;
+    text-decoration:none;
+}
+
 .log-in-button:active {
     color:white;
     background:#007bff;
