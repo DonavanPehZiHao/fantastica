@@ -29,31 +29,75 @@
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button type="submit" class="btn btn-primary" id="logIn">Log In</button>
+            <a href="admin.html">Admin</a>
         </form>
     </div>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script>
-      var emailV,passV;
+        var emailV,passV;
 
-      function Ready(){
-        emailV = document.getElementById("studentEmail").value;
-        passV = document.getElementById("studentPassword").value;
-        console.log(emailV);
-      };
-
-      document.getElementById("logIn").onclick = function(){
-        Ready();if (typeof(Storage) !== "undefined") {
-          // Code for localStorage/sessionStorage.
-          localStorage.setItem(emailV,passV);
-        } else {
-          // Sorry! No Web Storage support..
-          alert("No LS");
+        function Ready()
+        {
+            emailV = document.getElementById("studentEmail").value;
+            passV = document.getElementById("studentPassword").value;
         };
-        console.log(localStorage.getItem(emailV));
-        this.preventDefault();
-      };
+
+        document.getElementById("logIn").onclick = function()
+        {
+            Ready();
+            if (typeof(Storage) !== "undefined") 
+            {
+                if (emailV !== " " && passV !== " ")
+                {
+                    // Code for localStorage/sessionStorage.
+                    if (localStorage.getItem(emailV) == passV) 
+                    {
+                        alert("Successful")
+                        location.href = "homepage.html";
+                    } 
+                    else 
+                    {
+                        if (localStorage.getItem(emailV) == "undefined") 
+                        {
+                            alert("Not such Email");
+                        } 
+                        else 
+                        {
+                            if (localStorage.getItem(emailV) !== passV) 
+                            {
+                                alert("Wrong password");
+                            };
+                        };
+                    };
+                }
+                else
+                {
+                    if (emailV == " " && passV !== " ")
+                    {
+                        alert("Email is not filled");
+                    }
+                    else
+                    {
+                        if (email !== " " && passV == " ")
+                        {
+                            alert("Password is not filled");
+                        }
+                        else
+                        {
+                            alert("Email and Password is not filled")
+                        };
+                    };
+                };
+            } 
+            else 
+            {
+                // Sorry! No Web Storage support..
+                alert("No LS");
+            };
+            this.preventDefault();
+        };
     </script>
 </body>
 

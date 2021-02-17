@@ -29,6 +29,7 @@
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button type="submit" class="btn btn-primary" id="logIn">Log In</button>
+            <a href="index.html">Log In</a>
         </form>
     </div>
     <script src="assets/js/script.js"></script>
@@ -37,17 +38,25 @@
     <script>
       var emailV,passV;
 
-      function Ready(){
+      function Ready()
+      {
         emailV = document.getElementById("studentEmail").value;
         passV = document.getElementById("studentPassword").value;
-        console.log(emailV);
       };
 
-      document.getElementById("logIn").onclick = function(){
-        Ready();if (typeof(Storage) !== "undefined") {
+      document.getElementById("logIn").onclick = function()
+      {
+        Ready();
+        if (typeof(Storage) !== "undefined") 
+        {
           // Code for localStorage/sessionStorage.
-          localStorage.setItem(emailV,passV);
-        } else {
+          if (localStorage.getItem(emailV) == "undefined") 
+          {
+            localStorage.setItem(emailV,passV);
+          };
+        } 
+        else 
+        {
           // Sorry! No Web Storage support..
           alert("No LS");
         };
