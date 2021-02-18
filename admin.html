@@ -28,7 +28,7 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <button type="submit" class="btn btn-primary" id="logIn">Log In</button>
+            <button type="submit" class="btn btn-primary" id="logIn">Update</button><br>
             <a href="index.html">Log In</a>
         </form>
     </div>
@@ -40,8 +40,8 @@
 
       function Ready()
       {
-        emailV = document.getElementById("studentEmail").value;
-        passV = document.getElementById("studentPassword").value;
+        emailV = document.getElementById("studentEmail").value.toUpperCase();
+        passV = document.getElementById("studentPassword").value.toUpperCase();
       };
 
       document.getElementById("logIn").onclick = function()
@@ -50,15 +50,12 @@
         if (typeof(Storage) !== "undefined") 
         {
           // Code for localStorage/sessionStorage.
-          if (localStorage.getItem(emailV) == "undefined") 
-          {
             localStorage.setItem(emailV,passV);
-          };
         } 
         else 
         {
           // Sorry! No Web Storage support..
-          alert("No LS");
+          alert("No LocalStorage");
         };
         console.log(localStorage.getItem(emailV));
         this.preventDefault();

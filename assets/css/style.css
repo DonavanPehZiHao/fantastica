@@ -36,4 +36,12 @@ form {
     display:block;
     padding: 55px 10% 5% 10%;
 }
-  
+
+a {
+    padding:10px;
+    text-align:center;
+}
+
+a:active {
+    text-decoration: none;
+}

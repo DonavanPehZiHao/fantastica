@@ -28,7 +28,7 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <button type="submit" class="btn btn-primary" id="logIn">Log In</button>
+            <button type="submit" class="btn btn-primary" id="logIn">Log In</button><br>
             <a href="admin.html">Admin</a>
         </form>
     </div>
@@ -40,8 +40,8 @@
 
         function Ready()
         {
-            emailV = document.getElementById("studentEmail").value;
-            passV = document.getElementById("studentPassword").value;
+            emailV = document.getElementById("studentEmail").value.toUpperCase();
+            passV = document.getElementById("studentPassword").value.toUpperCase();
         };
 
         document.getElementById("logIn").onclick = function()
@@ -49,44 +49,49 @@
             Ready();
             if (typeof(Storage) !== "undefined") 
             {
-                if (emailV !== " " && passV !== " ")
+                if (emailV.length != 0 && passV.length != 0)
                 {
                     // Code for localStorage/sessionStorage.
-                    if (localStorage.getItem(emailV) == passV) 
+                    if (emailV in localStorage)
                     {
-                        alert("Successful")
-                        location.href = "homepage.html";
-                    } 
-                    else 
-                    {
-                        if (localStorage.getItem(emailV) == "undefined") 
+                        if (localStorage.getItem(emailV) == passV)
                         {
-                            alert("Not such Email");
-                        } 
-                        else 
+                            window.location.href="/homepage.html";
+                        }
+                        else
                         {
-                            if (localStorage.getItem(emailV) !== passV) 
+                            if (localStorage.getItem(emailV) != passV)
                             {
-                                alert("Wrong password");
+                                alert("Incorrect password");
                             };
                         };
-                    };
+                    }
+                    else
+                    {
+                        if (localStorage.getItem(emailV) === null)
+                        {
+                            alert("Email does not exist");
+                        };
+                    }; 
                 }
                 else
                 {
-                    if (emailV == " " && passV !== " ")
+                    if (emailV.length == 0 && passV.length != 0)
                     {
                         alert("Email is not filled");
                     }
                     else
                     {
-                        if (email !== " " && passV == " ")
+                        if (emailV.length != 0 && passV.length == 0)
                         {
                             alert("Password is not filled");
                         }
                         else
                         {
-                            alert("Email and Password is not filled")
+                            if (emailV.length == 0 && passV.length == 0)
+                            {
+                                alert("Email and Password is not filled")
+                            };
                         };
                     };
                 };
@@ -96,7 +101,6 @@
                 // Sorry! No Web Storage support..
                 alert("No LS");
             };
-            this.preventDefault();
         };
     </script>
 </body>
