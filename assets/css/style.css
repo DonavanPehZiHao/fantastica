@@ -54,13 +54,13 @@ form {
     margin:10px 20px 10px 20px;
 }
 
-.announcement-container h4 { 
+.announcement-container h5 { 
     text-decoration:underline;
     width:80%;
 }
 
 .announcement h6 {
-    text-decoration:underline;
+    text-decoration:none;
     margin-left:10px;
     margin-top:10px;
     font-size:20px;
@@ -130,7 +130,7 @@ hr {
     width:80%;
 }
 
-.details h4{
+.details h5{
     margin-left:15px;
 }
 
@@ -153,4 +153,12 @@ hr {
 
 .col-sm-6 {
     margin-left:15px;
+}
+
+.welcome {
+    margin:10px 15px;
+}
+
+.welcome h2 {
+    font-weight: bold;
 }
