@@ -10,10 +10,12 @@ This app is design for students to track their academic matters, so the design i
 
 Existing Features
 
--
+- Announcement page
+- Results page
 
 Features Left to Implement
 
+- More admin system
 - Task system
 - Gamify the Task system(Levelling system, Real Time Events and Raid Battles)
 
