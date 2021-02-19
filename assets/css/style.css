@@ -1,8 +1,12 @@
 .footer {
-    position:absolute;
-    bottom:0;
-    background-color: #878787;
-    color: white;
+    position:fixed;
+    bottom:0pt;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-color: #7952b3;
+    color: black;
     width: 100%;
     height:40px;
     border: none;
@@ -37,11 +41,82 @@ form {
     padding: 55px 10% 5% 10%;
 }
 
-a {
+.logIn-link,.admin-link {
     padding:10px;
     text-align:center;
 }
 
-a:active {
+.logIn-link:active,.admin-link:active {
     text-decoration: none;
+}
+
+.announcement-container {
+    margin:10px 20px 10px 20px;
+}
+
+.announcement-container h4 { 
+    text-decoration:underline;
+    width:80%;
+}
+
+.announcement h6 {
+    text-decoration:underline;
+    margin-left:10px;
+    margin-top:10px;
+    font-size:20px;
+}
+
+.announcement {
+    border:1px solid black;
+    border-radius:5px;
+    margin-top:15px;
+}
+
+.announcement-header {
+    display:flex;
+}
+
+.announcement small{
+    margin-left:195px;
+    color:grey;
+}
+
+.announcement p {
+    margin:15px 10px 0px 10px;
+    word-wrap:break-word;
+}
+
+hr {
+    border-width:1px;
+    border-color:black;
+    width:95%;
+}
+
+.post-button {
+    border:none;
+    color:white;
+    background-color:#7952b3;
+    text-align:center;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.post-button a{
+    text-decoration:none;
+    color:black;
+    border:2px;
+    border-color:black;
+}
+
+#post {
+    margin-left:35px;
+}
+
+.post-cancel {
+    margin-left:39px;
+    text-align:center;
+}
+
+.post-cancel:active {
+    text-decoration:none;
 }

@@ -24,12 +24,8 @@
               <label for="studentPassword">Password</label>
               <input type="password" class="form-control" id="studentPassword">
             </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
             <button type="submit" class="btn btn-primary" id="logIn">Update</button><br>
-            <a href="index.html">Log In</a>
+            <a href="index.html" class="logIn-link">Log In</a>
         </form>
     </div>
     <script src="assets/js/script.js"></script>
@@ -57,8 +53,6 @@
           // Sorry! No Web Storage support..
           alert("No LocalStorage");
         };
-        console.log(localStorage.getItem(emailV));
-        this.preventDefault();
       };
     </script>
 </body>
