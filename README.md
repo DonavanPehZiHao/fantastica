@@ -15,6 +15,7 @@ Existing Features
 
 Features Left to Implement
 
+- Add in more fantasy element
 - More admin system
 - Task system
 - Gamify the Task system(Levelling system, Real Time Events and Raid Battles)
