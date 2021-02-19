@@ -130,8 +130,8 @@ hr {
     width:80%;
 }
 
-.details h6{
-    margin-left:10px;
+.details h4{
+    margin-left:15px;
 }
 
 .information {
@@ -152,5 +152,5 @@ hr {
 }
 
 .col-sm-6 {
-    margin-left:10px;
+    margin-left:15px;
 }
