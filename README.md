@@ -27,3 +27,6 @@ Features Left to Implement
 
 - [Normalize.css](https://necolas.github.io/normalize.css)
 	- This project uses [Normalize.css] to have better cross-browser consistency in the default styling of HTML elements.
+
+## GitHub Link 
+https://donavanpehzihao.github.io/fantastica/
