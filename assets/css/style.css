@@ -120,3 +120,37 @@ hr {
 .post-cancel:active {
     text-decoration:none;
 }
+
+.details {
+    margin:20px 10px 20px 0px;
+}
+
+.user-name {
+    margin:20px 10px 20px 0px;
+    width:80%;
+}
+
+.details h6{
+    margin-left:10px;
+}
+
+.information {
+    display:flex;
+    margin:20px 10px 20px 0px;
+}
+
+.f-w-600 {
+    font-weight: 600;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: #919aa3 !important;
+}
+
+.col-sm-6 {
+    margin-left:10px;
+}
