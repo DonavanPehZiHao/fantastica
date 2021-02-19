@@ -84,6 +84,7 @@ form {
 .announcement p {
     margin:15px 10px 0px 10px;
     word-wrap:break-word;
+    font-size:15px;
 }
 
 hr {
